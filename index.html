@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NeuroV8 - Quantum Neural Sensing and Metrology. Mapping sub-picotesla magnetic fields with room-temperature Nitrogen-Vacancy diamond sensor arrays.">
+    <title>NeuroV8 | Quantum Neural Sensing & Metrology</title>
+    
+    <!-- Premium Google Fonts: Outfit for Headings, Inter for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" id="nav-logo">
+                <span class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                        <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+                        <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                    </svg>
+                </span>
+                <span class="logo-text">NEURO<span class="accent-text">V8</span> <span class="sub-logo-text">QUANTUM</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#technology" class="nav-link">Technology</a>
+                <a href="#applications" class="nav-link">Applications</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#roadmap" class="nav-link">Roadmap</a>
+                <a href="#research" class="nav-link">Research</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-cta-wrapper">
+                <a href="#contact" class="btn btn-primary btn-sm">Request Demo</a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="#hero" class="mobile-link">Home</a>
+        <a href="#technology" class="mobile-link">Technology</a>
+        <a href="#applications" class="mobile-link">Applications</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#roadmap" class="mobile-link">Roadmap</a>
+        <a href="#research" class="mobile-link">Research</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <a href="#contact" class="btn btn-primary mobile-cta">Request Demo</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas id="hero-canvas" class="hero-canvas"></canvas>
+        <div class="hero-glow"></div>
+        <div class="container hero-container">
+            <div class="hero-content text-center">
+                <div class="tagline scroll-reveal">Quantum Neural Sensing & Metrology</div>
+                <h1 class="hero-title scroll-reveal">
+                    The Future of Brain Metrology is Quantum.
+                </h1>
+                <p class="hero-subtitle scroll-reveal">
+                    NeuroV8 maps sub-picotesla neural magnetic fields using room-temperature Nitrogen-Vacancy (NV) diamond center magnetometers, unlocking non-invasive BCIs at cellular resolution.
+                </p>
+                <div class="hero-cta scroll-reveal">
+                    <a href="#technology" class="btn btn-primary">Explore Metrology</a>
+                    <a href="#contact" class="btn btn-secondary">Watch ODMR Demo</a>
+                </div>
+            </div>
+        </div>
+        <a href="#statistics" class="scroll-indicator" aria-label="Scroll to next section">
+            <span class="mouse">
+                <span class="wheel"></span>
+            </span>
+            <span class="arrow-down"></span>
+        </a>
+    </section>
+
+    <!-- Hero Statistics Section -->
+    <section class="statistics" id="statistics">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="stat-icon">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a7 7 0 1 0 10 10"/>
+                        </svg>
+                    </div>
+                    <h3 class="stat-number">&lt; 0.1 pT / √Hz</h3>
+                    <h4 class="stat-label">Magnetic Field Sensitivity</h4>
+                    <p class="stat-desc">Sub-picotesla spin-state readout resolving firing potentials of individual cortical lobes.</p>
+                </div>
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="stat-icon">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h3 class="stat-number">120 dB</h3>
+                    <h4 class="stat-label">Geomagnetic Rejection</h4>
+                    <p class="stat-desc">Dynamic differential metrology canceling ambient environmental noise in open, unshielded air.</p>
+                </div>
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="stat-icon">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3 class="stat-number">0% Loss</h3>
+                    <h4 class="stat-label">Zero Skull Attenuation</h4>
+                    <p class="stat-desc">Magnetic waves pass cleanly through bone tissue, bypassing the high distortion limits of classical EEG.</p>
+                </div>
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="stat-icon">
+                            <path d="M4.5 16.5c-1.5 1.26-2.5 3.19-2.5 5.5h20c0-2.31-1-4.24-2.5-5.5"/>
+                            <circle cx="12" cy="9" r="7"/>
+                        </svg>
+                    </div>
+                    <h3 class="stat-number">293 K</h3>
+                    <h4 class="stat-label">Room-Temperature Metrology</h4>
+                    <p class="stat-desc">Eliminates bulk liquid helium cooling. Custom diamond lattice cells fit within a standard wearable band.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="split-layout">
+                <div class="split-left scroll-reveal">
+                    <div class="illustration-container">
+                        <!-- Custom vector SVG representing neural pathways/brain silhouette -->
+                        <svg viewBox="0 0 500 500" class="neural-brain-svg" id="neural-brain-svg">
+                            <defs>
+                                <radialGradient id="brain-glow" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#00E676" stop-opacity="0.15" />
+                                    <stop offset="100%" stop-color="#2962FF" stop-opacity="0" />
+                                </radialGradient>
+                            </defs>
+                            <circle cx="250" cy="250" r="220" fill="url(#brain-glow)"/>
+                            <!-- Neural nodes and connections drawn by code in JS, or static detailed structure -->
+                            <g id="svg-brain-network" stroke="#00BCD4" stroke-opacity="0.4" stroke-width="1.5">
+                                <line x1="250" y1="120" x2="180" y2="180" />
+                                <line x1="250" y1="120" x2="320" y2="180" />
+                                <line x1="180" y1="180" x2="140" y2="250" />
+                                <line x1="320" y1="180" x2="360" y2="250" />
+                                <line x1="140" y1="250" x2="200" y2="320" />
+                                <line x1="360" y1="250" x2="300" y2="320" />
+                                <line x1="200" y1="320" x2="250" y2="380" />
+                                <line x1="300" y1="320" x2="250" y2="380" />
+                                <line x1="250" y1="120" x2="250" y2="250" />
+                                <line x1="140" y1="250" x2="250" y2="250" />
+                                <line x1="360" y1="250" x2="250" y2="250" />
+                                <line x1="250" y1="250" x2="250" y2="380" />
+                            </g>
+                            <g id="svg-brain-nodes" fill="#00E676">
+                                <circle cx="250" cy="120" r="6" />
+                                <circle cx="180" cy="180" r="5" fill="#2962FF"/>
+                                <circle cx="320" cy="180" r="5" />
+                                <circle cx="140" cy="250" r="7" />
+                                <circle cx="250" cy="250" r="8" fill="#0B1F3A" stroke="#00E676" stroke-width="2"/>
+                                <circle cx="360" cy="250" r="7" fill="#2962FF"/>
+                                <circle cx="200" cy="320" r="5" />
+                                <circle cx="300" cy="320" r="5" />
+                                <circle cx="250" cy="380" r="6" />
+                            </g>
+                        </svg>
+                        <div class="pulse-ring"></div>
+                    </div>
+                </div>
+                <div class="split-right scroll-reveal">
+                    <div class="section-tag">About NeuroV8</div>
+                    <h2 class="section-title">Redefining Brain-Computer Interfaces with Quantum Metrology.</h2>
+                    <p class="section-desc">
+                        NeuroV8 is an advanced quantum neural sensing and metrology platform designed to record cortical magnetic activity at single-neuron scales.
+                    </p>
+                    <p class="section-desc">
+                        By integrating Nitrogen-Vacancy (NV) diamond center arrays, high-speed optoelectronic readouts, and quantum-inspired AI, NeuroV8 bridges the gap between quantum physics and cognitive systems, offering non-invasive neuro-interfaces with the fidelity of direct surgical implants.
+                    </p>
+                    
+                    <div class="mission-vision">
+                        <div class="mv-block">
+                            <span class="mv-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                            </span>
+                            <div>
+                                <h4 class="mv-title">Quantum Accuracy</h4>
+                                <p class="mv-text">To capture neural currents in three dimensions, removing the resolution bottlenecks of classical non-invasive sensors.</p>
+                            </div>
+                        </div>
+                        <div class="mv-block">
+                            <span class="mv-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </span>
+                            <div>
+                                <h4 class="mv-title">Wearable Form-Factor</h4>
+                                <p class="mv-text">Replacing cryogenic MEG helmets with comfortable, room-temperature diamond sensor bands built for continuous daily interaction.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="technology" id="technology">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <div class="section-tag">Core Technology Stack</div>
+                <h2 class="section-title">Quantum Sensing & Metrology Pipelines</h2>
+                <p class="section-subtitle">Click on each core framework component to explore its deep-tech architecture and processing methodology.</p>
+            </div>
+            
+            <div class="tech-stack-vertical">
+                <!-- Tech Card 1 -->
+                <div class="tech-item scroll-reveal" data-tech-id="quantum">
+                    <div class="tech-item-summary">
+                        <div class="tech-meta">
+                            <div class="tech-num">01</div>
+                            <div class="tech-title">NV Magnetometry</div>
+                        </div>
+                        <div class="tech-short">Nitrogen-Vacancy diamond defects capturing sub-picotesla neural magnetic fields.</div>
+                        <div class="tech-toggle-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="tech-item-details">
+                        <div class="tech-details-grid">
+                            <div class="tech-details-text">
+                                <p>Our non-invasive active sensor array utilizes dry, room-temperature diamond cells embedded with micro-engineered Nitrogen-Vacancy defects. These spin-active defect centers record magnetic field variations directly through bone tissue without attenuation.</p>
+                                <ul>
+                                    <li><strong>NV Defect Centers:</strong> Single-crystal diamond matrices.</li>
+                                    <li><strong>Wearable Array:</strong> Distributed sensor layout mapping cortical structures.</li>
+                                    <li><strong>Room-Temperature:</strong> Eliminates cryogenic helium shielding requirements.</li>
+                                </ul>
+                            </div>
+                            <div class="tech-details-visual">
+                                <canvas class="tech-visual-canvas" id="canvas-quantum"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Card 2 -->
+                <div class="tech-item scroll-reveal" data-tech-id="odmr">
+                    <div class="tech-item-summary">
+                        <div class="tech-meta">
+                            <div class="tech-num">02</div>
+                            <div class="tech-title">Laser & ODMR Readout</div>
+                        </div>
+                        <div class="tech-short">Optical Detection of Magnetic Resonance using 532nm laser excitation.</div>
+                        <div class="tech-toggle-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="tech-item-details">
+                        <div class="tech-details-grid">
+                            <div class="tech-details-text">
+                                <p>Optical Detection of Magnetic Resonance (ODMR) monitors spin states within the diamond crystal lattice. A green initialization laser (532nm) and micro-coils polarize and sweep the defect spins, mapping neural magnetic fields onto fluorescent light intensity dips.</p>
+                                <ul>
+                                    <li><strong>532nm Laser Polarization:</strong> Optical spin-state initialization.</li>
+                                    <li><strong>Fluorescence Dips:</strong> Precise resonance shift tracking.</li>
+                                    <li><strong>Zeeman Splitting:</strong> Directly proportional to neural magnetic vectors.</li>
+                                </ul>
+                            </div>
+                            <div class="tech-details-visual">
+                                <canvas class="tech-visual-canvas" id="canvas-odmr"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Card 3 -->
+                <div class="tech-item scroll-reveal" data-tech-id="cancellation">
+                    <div class="tech-item-summary">
+                        <div class="tech-meta">
+                            <div class="tech-num">03</div>
+                            <div class="tech-title">Geomagnetic Cancellation</div>
+                        </div>
+                        <div class="tech-short">Real-time subtractive differential sensing removing ambient field noise.</div>
+                        <div class="tech-toggle-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="tech-item-details">
+                        <div class="tech-details-grid">
+                            <div class="tech-details-text">
+                                <p>Because the Earth's magnetic field and urban power lines are orders of magnitude stronger than neural activity, we employ active differential gradiometers. By subtracting reference field data, the device cancels background noise in real-time.</p>
+                                <ul>
+                                    <li><strong>Active Gradiometry:</strong> Sub-nanotesla reference tracking.</li>
+                                    <li><strong>120 dB Noise Cancellation:</strong> Isolates signal in open environments.</li>
+                                    <li><strong>Dynamic Filtering:</strong> Adapts to moving magnetic anomalies.</li>
+                                </ul>
+                            </div>
+                            <div class="tech-details-visual">
+                                <canvas class="tech-visual-canvas" id="canvas-cancellation"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Card 4 -->
+                <div class="tech-item scroll-reveal" data-tech-id="readout">
+                    <div class="tech-item-summary">
+                        <div class="tech-meta">
+                            <div class="tech-num">04</div>
+                            <div class="tech-title">Spin Signal Processing</div>
+                        </div>
+                        <div class="tech-short">Optoelectronic arrays converting red photoluminescence into magnetic data.</div>
+                        <div class="tech-toggle-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="tech-item-details">
+                        <div class="tech-details-grid">
+                            <div class="tech-details-text">
+                                <p>High-sensitivity photodiode matrices capture spin-dependent red photoluminescence (637nm) emitted by the diamonds. The analog signals are digitized using low-noise, high-resolution converters to form spatial magnetic maps.</p>
+                                <ul>
+                                    <li><strong>637nm Red Photoluminescence:</strong> Spin-state fluorescent output.</li>
+                                    <li><strong>Photodetector Grids:</strong> High quantum efficiency conversion.</li>
+                                    <li><strong>Ultra-low Noise Amplifiers:</strong> Prevents readout amplification errors.</li>
+                                </ul>
+                            </div>
+                            <div class="tech-details-visual">
+                                <canvas class="tech-visual-canvas" id="canvas-readout"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Card 5 -->
+                <div class="tech-item scroll-reveal" data-tech-id="calibration">
+                    <div class="tech-item-summary">
+                        <div class="tech-meta">
+                            <div class="tech-num">05</div>
+                            <div class="tech-title">EEG/EOG Hybrid Calibration</div>
+                        </div>
+                        <div class="tech-short">Complementary classic biosensors optimizing spatial sensor tracking.</div>
+                        <div class="tech-toggle-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="tech-item-details">
+                        <div class="tech-details-grid">
+                            <div class="tech-details-text">
+                                <p>To account for micro-movements of the headset, classical dry EEG electrodes and EOG sensors are integrated. These sensors continuously monitor skin impedance and eye dipoles, providing real-time drift calibration to the quantum sensing pipeline.</p>
+                                <ul>
+                                    <li><strong>Skin Impedance Monitoring:</strong> High-precision contact calibration.</li>
+                                    <li><strong>Blink Saccade Reference:</strong> EOG-driven noise subtraction.</li>
+                                    <li><strong>Hybrid Data Fusion:</strong> Merges electrical and magnetic signal grids.</li>
+                                </ul>
+                            </div>
+                            <div class="tech-details-visual">
+                                <canvas class="tech-visual-canvas" id="canvas-calibration"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Card 6 -->
+                <div class="tech-item scroll-reveal" data-tech-id="tensor-ai">
+                    <div class="tech-item-summary">
+                        <div class="tech-meta">
+                            <div class="tech-num">06</div>
+                            <div class="tech-title">Quantum-Inspired AI</div>
+                        </div>
+                        <div class="tech-short">Tensor network models resolving 3D magnetic source localization.</div>
+                        <div class="tech-toggle-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="tech-item-details">
+                        <div class="tech-details-grid">
+                            <div class="tech-details-text">
+                                <p>To translate scalp magnetic field coordinates into local neural currents, our custom Tensor Network algorithms solve the magnetic inverse problem. By modeling brainwaves as high-dimensional tensor contractions, our AI maps signals in 3D.</p>
+                                <ul>
+                                    <li><strong>Tensor Network Contracting:</strong> Decodes multi-sensor correlations.</li>
+                                    <li><strong>Inverse Problem Solvers:</strong> Localizes source currents down to 50 micrometers.</li>
+                                    <li><strong>Low Latency Inferences:</strong> Executed instantly on dedicated edge silicon.</li>
+                                </ul>
+                            </div>
+                            <div class="tech-details-visual">
+                                <canvas class="tech-visual-canvas" id="canvas-tensor-ai"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Card 7 -->
+                <div class="tech-item scroll-reveal" data-tech-id="edge">
+                    <div class="tech-item-summary">
+                        <div class="tech-meta">
+                            <div class="tech-num">07</div>
+                            <div class="tech-title">Real-Time Edge Processor</div>
+                        </div>
+                        <div class="tech-short">Low-power embedded systems scheduling deterministic sensor readouts.</div>
+                        <div class="tech-toggle-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="tech-item-details">
+                        <div class="tech-details-grid">
+                            <div class="tech-details-text">
+                                <p>A custom ARM-based micro-controller handles green laser driving, photodiode reading, and ODMR sweeps on a fraction-milliwatt power budget. The RTOS scheduler guarantees sub-10ms control signal execution.</p>
+                                <ul>
+                                    <li><strong>0.8W Active Budget:</strong> Long-term thermal safety and battery life.</li>
+                                    <li><strong>Deterministic Scheduler:</strong> Avoids signal drops during cognitive tasks.</li>
+                                    <li><strong>Secure Enclave:</strong> Encrypts raw quantum data locally before streaming.</li>
+                                </ul>
+                            </div>
+                            <div class="tech-details-visual">
+                                <canvas class="tech-visual-canvas" id="canvas-edge"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Card 8 -->
+                <div class="tech-item scroll-reveal" data-tech-id="nanofab">
+                    <div class="tech-item-summary">
+                        <div class="tech-meta">
+                            <div class="tech-num">08</div>
+                            <div class="tech-title">Diamond Nanofabrication</div>
+                        </div>
+                        <div class="tech-short">Synthetic diamond growth with optimized Nitrogen density profiles.</div>
+                        <div class="tech-toggle-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="tech-item-details">
+                        <div class="tech-details-grid">
+                            <div class="tech-details-text">
+                                <p>We grow custom chemical vapor deposition (CVD) diamonds. By precisely doping nitrogen gas and controlling vacancies during crystal growth, we maximize spin density while preserving long coherence times.</p>
+                                <ul>
+                                    <li><strong>Precision Doping:</strong> High concentration of active spin sensors.</li>
+                                    <li><strong>Coherence Optimization:</strong> Prolongs spin-state sensitivity.</li>
+                                    <li><strong>Laser Cleaving:</strong> Micro-structured dimensions for wearable arrays.</li>
+                                </ul>
+                            </div>
+                            <div class="tech-details-visual">
+                                <canvas class="tech-visual-canvas" id="canvas-nanofab"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <div class="section-tag">Metrology Flow</div>
+                <h2 class="section-title">The Quantum Sensing Journey</h2>
+                <p class="section-subtitle">How atomic spin states in diamond lattices map cortical currents to digital commands in real-time.</p>
+            </div>
+            
+            <div class="flow-diagram-container scroll-reveal">
+                <div class="flow-steps">
+                    <!-- Step 1 -->
+                    <div class="flow-step active" data-step="1">
+                        <div class="step-num">1</div>
+                        <h4 class="step-name">Spin Polarization</h4>
+                        <p class="step-desc">532nm green laser initializes NV diamond spins.</p>
+                    </div>
+                    <div class="flow-connector">
+                        <svg viewBox="0 0 50 20" class="connector-arrow">
+                            <path d="M 0 10 L 40 10 M 30 5 L 40 10 L 30 15" fill="none" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="flow-step" data-step="2">
+                        <div class="step-num">2</div>
+                        <h4 class="step-name">Differential Rejection</h4>
+                        <p class="step-desc">Reference magnetometers subtract ambient noise.</p>
+                    </div>
+                    <div class="flow-connector">
+                        <svg viewBox="0 0 50 20" class="connector-arrow">
+                            <path d="M 0 10 L 40 10 M 30 5 L 40 10 L 30 15" fill="none" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="flow-step" data-step="3">
+                        <div class="step-num">3</div>
+                        <h4 class="step-name">Zeeman Splitting</h4>
+                        <p class="step-desc">Cortical magnetic fields shift diamond spin levels.</p>
+                    </div>
+                    <div class="flow-connector">
+                        <svg viewBox="0 0 50 20" class="connector-arrow">
+                            <path d="M 0 10 L 40 10 M 30 5 L 40 10 L 30 15" fill="none" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="flow-step" data-step="4">
+                        <div class="step-num">4</div>
+                        <h4 class="step-name">ODMR Spectroscopy</h4>
+                        <p class="step-desc">Fluorescence dips monitor Zeeman shift values.</p>
+                    </div>
+                </div>
+
+                <div class="flow-connector-vertical">
+                    <svg viewBox="0 0 20 50" class="connector-arrow-vertical">
+                        <path d="M 10 0 L 10 40 M 5 30 L 10 40 L 15 30" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+
+                <div class="flow-steps">
+                    <!-- Step 7 -->
+                    <div class="flow-step" data-step="7">
+                        <div class="step-num">7</div>
+                        <h4 class="step-name">Interface Action</h4>
+                        <p class="step-desc">Command executes on outer system under 10ms.</p>
+                    </div>
+                    <div class="flow-connector-reverse">
+                        <svg viewBox="0 0 50 20" class="connector-arrow reverse">
+                            <path d="M 50 10 L 10 10 M 20 5 L 10 10 L 20 15" fill="none" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <!-- Step 6 -->
+                    <div class="flow-step" data-step="6">
+                        <div class="step-num">6</div>
+                        <h4 class="step-name">Source Localization</h4>
+                        <p class="step-desc">Tensor AI maps exact 3D coordinates of neural firing.</p>
+                    </div>
+                    <div class="flow-connector-reverse">
+                        <svg viewBox="0 0 50 20" class="connector-arrow reverse">
+                            <path d="M 50 10 L 10 10 M 20 5 L 10 10 L 20 15" fill="none" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="flow-step" data-step="5">
+                        <div class="step-num">5</div>
+                        <h4 class="step-name">Telemetry Conversion</h4>
+                        <p class="step-desc">Photodiode grids digitize raw spin vectors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <div class="section-tag">Core Capabilities</div>
+                <h2 class="section-title">Engineered for Quantum Precision</h2>
+                <p class="section-subtitle">A synthesis of atomic spin metrology, quantum optics, and dynamic digital integration.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="feat-icon">
+                            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">ODMR Tracking</h3>
+                    <p class="feature-desc">Continuous optical tracking of spin resonances providing microsecond voltage monitoring.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="feat-icon">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M6 12h.01M10 12h.01M14 12h.01M18 12h.01M7 16h10"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Eye Typing (Morse)</h3>
+                    <p class="feature-desc">Translate vertical and horizontal saccadic eye patterns to Morse sequence text input channels.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="feat-icon">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Seizure Vector Analysis</h3>
+                    <p class="feature-desc">Predicting epilepsy events by tracking microscopic magnetic signal spikes in 3D cortical spaces.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="feat-icon">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Magnetic Brain Mapping</h3>
+                    <p class="feature-desc">Real-time 3D telemetry showing neural currents across motor cortex regions during tasks.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="feat-icon">
+                            <path d="M20 7h-9M14 12H5M19 17h-6M5 7h2v2H5zm9 5h2v2h-2zm5 5h2v2h-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Dynamic Calibration</h3>
+                    <p class="feature-desc">Self-regulating calibration loops adapting spin readouts to environmental magnetic noise.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="feat-icon">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">RTOS Spin Scheduler</h3>
+                    <p class="feature-desc">Custom microsecond schedules for green laser pulses and photodiode readout synchronizations.</p>
+                </div>
+                <!-- Feature 7 -->
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="feat-icon">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Tensor Network Decoding</h3>
+                    <p class="feature-desc">Using contracted high-dimensional tensor math to solve the bio-magnetic source location model.</p>
+                </div>
+                <!-- Feature 8 -->
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="feat-icon">
+                            <line x1="6" y1="3" x2="6" y2="21"/>
+                            <line x1="18" y1="3" x2="18" y2="21"/>
+                            <line x1="12" y1="3" x2="12" y2="21"/>
+                            <path d="M3 12h18"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Universal SDK</h3>
+                    <p class="feature-desc">Streams processed magnetic vectors and raw spin densities to Python, C++, and WebSDK networks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section class="applications" id="applications">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <div class="section-tag">Real World Impact</div>
+                <h2 class="section-title">Unlocking Practical Metrology</h2>
+                <p class="section-subtitle">From clinical diagnostics to high-bandwidth creative expression, NeuroV8 scales across industries.</p>
+            </div>
+
+            <div class="apps-grid">
+                <!-- App 1 -->
+                <div class="app-card scroll-reveal">
+                    <div class="app-image-overlay"></div>
+                    <div class="app-content">
+                        <div class="app-tag">Clinical</div>
+                        <h3 class="app-title">Healthcare Diagnostics</h3>
+                        <p class="app-text">Empowering clinicians with real-time detection of neurological anomalies, early seizure onset alerts, and cognitive stress trackers.</p>
+                    </div>
+                </div>
+                <!-- App 2 -->
+                <div class="app-card scroll-reveal">
+                    <div class="app-image-overlay"></div>
+                    <div class="app-content">
+                        <div class="app-tag">Inclusion</div>
+                        <h3 class="app-title">Assistive Technology</h3>
+                        <p class="app-text">Restoring agency to individuals with profound physical challenges through hands-free motor controls and keyboard communication systems.</p>
+                    </div>
+                </div>
+                <!-- App 3 -->
+                <div class="app-card scroll-reveal">
+                    <div class="app-image-overlay"></div>
+                    <div class="app-content">
+                        <div class="app-tag">Interface</div>
+                        <h3 class="app-title">Accessibility Controls</h3>
+                        <p class="app-text">Developing OS layer integration structures that make cursor and desktop operating entirely transparent to manual input dependencies.</p>
+                    </div>
+                </div>
+                <!-- App 4 -->
+                <div class="app-card scroll-reveal">
+                    <div class="app-image-overlay"></div>
+                    <div class="app-content">
+                        <div class="app-tag">Science</div>
+                        <h3 class="app-title">Academic Research</h3>
+                        <p class="app-text">Providing structured raw data outputs formatted in Lab Streaming Layer (LSL) standards for neuroscientific experimentation.</p>
+                    </div>
+                </div>
+                <!-- App 5 -->
+                <div class="app-card scroll-reveal">
+                    <div class="app-image-overlay"></div>
+                    <div class="app-content">
+                        <div class="app-tag">Sensing</div>
+                        <h3 class="app-title">Brain-Computer Interfaces</h3>
+                        <p class="app-text">Designing non-invasive neural interface wearables capable of matching invasive systems in command execution speeds.</p>
+                    </div>
+                </div>
+                <!-- App 6 -->
+                <div class="app-card scroll-reveal">
+                    <div class="app-image-overlay"></div>
+                    <div class="app-content">
+                        <div class="app-tag">Clinical</div>
+                        <h3 class="app-title">Rehabilitation Tools</h3>
+                        <p class="app-text">Enhancing neuroplastic recovery via target-oriented closed-loop visual interfaces during post-stroke physical recovery.</p>
+                    </div>
+                </div>
+                <!-- App 7 -->
+                <div class="app-card scroll-reveal">
+                    <div class="app-image-overlay"></div>
+                    <div class="app-content">
+                        <div class="app-tag">IoT</div>
+                        <h3 class="app-title">Smart Devices</h3>
+                        <p class="app-text">Mapping neural eye saccades and motor imagery signals directly into automated control sequences for modern smart environments.</p>
+                    </div>
+                </div>
+                <!-- App 8 -->
+                <div class="app-card scroll-reveal">
+                    <div class="app-image-overlay"></div>
+                    <div class="app-content">
+                        <div class="app-tag">Security</div>
+                        <h3 class="app-title">Cryptographic Auth</h3>
+                        <p class="app-text">Using individual, high-fidelity magnetic brain resonance profiles as a unique, secure biometric authorization channel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Vision Section -->
+    <section class="future-vision" id="future-vision">
+        <div class="future-vision-glow"></div>
+        <div class="container">
+            <div class="split-layout">
+                <div class="split-left scroll-reveal">
+                    <div class="section-tag light">Strategic Horizons</div>
+                    <h2 class="section-title text-white">Building the Future of Neurotechnology.</h2>
+                    <p class="section-desc text-white-muted">
+                        We are designing long-term technological architectures that transition from classical consumer EEG toward ultra-sensitive quantum magnetometers. 
+                    </p>
+                    <p class="section-desc text-white-muted">
+                        Our research path aims to replace bulk sensors with micro-engineered diamond nitrogen-vacancy (NV) centers, capturing thoughts with cellular-level precision.
+                    </p>
+
+                    <div class="horizon-list">
+                        <div class="horizon-item">
+                            <span class="horizon-dot"></span>
+                            <span class="horizon-text">Diamond NV Centers for high-spatial resolution biosensing</span>
+                        </div>
+                        <div class="horizon-item">
+                            <span class="horizon-dot"></span>
+                            <span class="horizon-text">Continuous sub-microvolt neural telemetry tracking</span>
+                        </div>
+                        <div class="horizon-item">
+                            <span class="horizon-dot"></span>
+                            <span class="horizon-text">Digital therapeutics for cognitive health recovery support</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="split-right scroll-reveal">
+                    <div class="futuristic-visual">
+                        <canvas id="quantum-sensor-canvas"></canvas>
+                        <div class="quantum-sensor-tag">NV-Diamond Magnetometer Core [0.1 pT]</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Foundation Section -->
+    <section class="research" id="research">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <div class="section-tag">Scientific Roots</div>
+                <h2 class="section-title">Interdisciplinary Foundations</h2>
+                <p class="section-subtitle">NeuroV8 operates at the convergence of six foundational scientific and engineering disciplines.</p>
+            </div>
+
+            <div class="research-network-wrapper scroll-reveal">
+                <canvas id="research-network-canvas" class="research-network-canvas"></canvas>
+                
+                <div class="research-node node-neuro" data-desc="Analyzing spin states of active electron complexes under external magnetic vectors.">
+                    <h4>Quantum Optics</h4>
+                </div>
+                <div class="research-node node-biomed" data-desc="Growing chemical vapor deposition (CVD) diamonds with targeted Nitrogen doping profiles.">
+                    <h4>Diamond Nanofab</h4>
+                </div>
+                <div class="research-node node-signal" data-desc="Real-time bandpass filtering, digital signal processing, and active feedback loops.">
+                    <h4>Signal Processing</h4>
+                </div>
+                <div class="research-node node-ai" data-desc="Solving the magnetic inverse problem using contracted tensor networks.">
+                    <h4>Tensor Networks</h4>
+                </div>
+                <div class="research-node node-embedded" data-desc="Custom low-wattage ASICs, on-board NPUs, and real-time deterministic schedulers.">
+                    <h4>Embedded Electronics</h4>
+                </div>
+                <div class="research-node node-quantum" data-desc="Quantum NV magnetometers tracking magnetic field variations bypassing skulls.">
+                    <h4>Quantum Tech</h4>
+                </div>
+            </div>
+            
+            <div id="node-description-box" class="node-description-box">
+                <p>Hover over or click a discipline to explore how it underpins our hardware and decoding stacks.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Roadmap Section -->
+    <section class="roadmap" id="roadmap">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <div class="section-tag">Milestones & Vision</div>
+                <h2 class="section-title">Product Roadmap</h2>
+                <p class="section-subtitle">Our structured evolution from scientific concept to globally deployed neural interface networks.</p>
+            </div>
+
+            <div class="roadmap-timeline-wrapper scroll-reveal">
+                <div class="roadmap-timeline">
+                    <!-- Milestone 1 -->
+                    <div class="roadmap-milestone completed">
+                        <div class="milestone-status">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <h4 class="milestone-phase">Phase 01</h4>
+                        <h3 class="milestone-title">Concept & Physics</h3>
+                        <p class="milestone-text">Modeling diamond lattice spin vectors, excitation laser metrics, and sensor placement grids.</p>
+                    </div>
+                    <!-- Milestone 2 -->
+                    <div class="roadmap-milestone completed">
+                        <div class="milestone-status">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <h4 class="milestone-phase">Phase 02</h4>
+                        <h3 class="milestone-title">Spin Readout Prototype</h3>
+                        <p class="milestone-text">Creating the first dry-contact headrest using optical spin sensors with 532nm laser excitation.</p>
+                    </div>
+                    <!-- Milestone 3 -->
+                    <div class="roadmap-milestone active">
+                        <div class="milestone-status">
+                            <span class="pulse-inner"></span>
+                        </div>
+                        <h4 class="milestone-phase">Phase 03</h4>
+                        <h3 class="milestone-title">Clinical Validation</h3>
+                        <p class="milestone-text">Validating magnetic source location calculations against fMRI coordinates in hospital tests.</p>
+                    </div>
+                    <!-- Milestone 4 -->
+                    <div class="roadmap-milestone">
+                        <div class="milestone-status"></div>
+                        <h4 class="milestone-phase">Phase 04</h4>
+                        <h3 class="milestone-title">Tensor AI Scale</h3>
+                        <p class="milestone-text">Optimizing our tensor network algorithms to accelerate 3D brain magnetic localization to sub-10ms ranges.</p>
+                    </div>
+                    <!-- Milestone 5 -->
+                    <div class="roadmap-milestone">
+                        <div class="milestone-status"></div>
+                        <h4 class="milestone-phase">Phase 05</h4>
+                        <h3 class="milestone-title">Wearable Integration</h3>
+                        <p class="milestone-text">Compressing laser drivers and photodiodes into a lightweight, headrest form factor.</p>
+                    </div>
+                    <!-- Milestone 6 -->
+                    <div class="roadmap-milestone">
+                        <div class="milestone-status"></div>
+                        <h4 class="milestone-phase">Phase 06</h4>
+                        <h3 class="milestone-title">Developer Release</h3>
+                        <p class="milestone-text">Obtaining regulatory clearances and launching the first developer headset model line.</p>
+                    </div>
+                    <!-- Milestone 7 -->
+                    <div class="roadmap-milestone">
+                        <div class="milestone-status"></div>
+                        <h4 class="milestone-phase">Phase 07</h4>
+                        <h3 class="milestone-title">Global Deployment</h3>
+                        <p class="milestone-text">Expanding developer APIs to enable ubiquitous spatial computing applications worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why NeuroV8 (Comparison) -->
+    <section class="comparison" id="comparison">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <div class="section-tag">Competitive Edge</div>
+                <h2 class="section-title">Evolving Beyond Legacy Interfaces</h2>
+                <p class="section-subtitle">How NeuroV8's quantum sensing bypasses the spatial limits of classical headsets and the surgical risks of invasive arrays.</p>
+            </div>
+
+            <div class="comparison-table-wrapper scroll-reveal">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Classical Headsets (EEG)</th>
+                            <th>Invasive Arrays (Neuralink)</th>
+                            <th class="highlight-col">NeuroV8 (Quantum Metrology)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Signal Attenuation</strong></td>
+                            <td>High. Skull and hair distort voltage signals severely.</td>
+                            <td>Zero. Electrodes touch cortical tissue directly.</td>
+                            <td class="highlight-col">Zero. Magnetic fields pass completely undistorted through bone.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Spatial Resolution</strong></td>
+                            <td>Poor (~30mm). Captures averaged general lobe signals.</td>
+                            <td>Excellent (~10μm). Individual neuron tracking.</td>
+                            <td class="highlight-col">High (~50μm). Captures microscopic local cortical currents.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Surgical Risk</strong></td>
+                            <td>None. Wearable headband.</td>
+                            <td>High. Requires robotic neurosurgery and skull opening.</td>
+                            <td class="highlight-col">None. Comfortable non-invasive wearable headset.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Setup Time</strong></td>
+                            <td>Wet-gel arrays take 10+ minutes; messy cleanups.</td>
+                            <td>Surgical recovery time; permanent attachment.</td>
+                            <td class="highlight-col">Mounts and self-calibrates in under 30 seconds.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AI Architecture</strong></td>
+                            <td>Static bandpower; session-by-session training required.</td>
+                            <td>Spike-sorting classification; direct coordinate maps.</td>
+                            <td class="highlight-col">Tensor Network source localization; continuous self-calibration.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <div class="section-tag">The Innovators</div>
+                <h2 class="section-title">Metaphysical Pioneers</h2>
+                <p class="section-subtitle">A dedicated core of biophysicists, engineers, and machine learning researchers mapping human consciousness.</p>
+            </div>
+
+            <div class="team-grid">
+                <!-- Member 1 -->
+                <div class="team-card scroll-reveal">
+                    <div class="team-avatar-wrapper">
+                        <!-- Mathematical geometry backdrop placeholder representing neural pattern -->
+                        <svg viewBox="0 0 100 100" class="team-avatar-svg">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#2962FF" stroke-width="1.5" stroke-dasharray="4 2"/>
+                            <path d="M50 15 L50 85 M15 50 L85 50" stroke="#00E676" stroke-width="1"/>
+                            <circle cx="50" cy="50" r="15" fill="#0B1F3A"/>
+                        </svg>
+                    </div>
+                    <h3 class="team-name">Dr. Elena Vance</h3>
+                    <h4 class="team-role">Founder & Chief Biophysicist</h4>
+                    <p class="team-bio">Former Max Planck researcher specializing in cortical local field potential dynamics and micro-sensor networks.</p>
+                </div>
+                <!-- Member 2 -->
+                <div class="team-card scroll-reveal">
+                    <div class="team-avatar-wrapper">
+                        <svg viewBox="0 0 100 100" class="team-avatar-svg">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#2962FF" stroke-width="1.5" stroke-dasharray="2 2"/>
+                            <polygon points="50,20 75,70 25,70" fill="none" stroke="#00E676" stroke-width="1.5"/>
+                            <circle cx="50" cy="55" r="10" fill="#0B1F3A"/>
+                        </svg>
+                    </div>
+                    <h3 class="team-name">Marcus Aurelius</h3>
+                    <h4 class="team-role">Head of Embedded Systems</h4>
+                    <p class="team-bio">Silicon designer focused on ultra-low-power edge computing architectures and hardware-level signal filtering.</p>
+                </div>
+                <!-- Member 3 -->
+                <div class="team-card scroll-reveal">
+                    <div class="team-avatar-wrapper">
+                        <svg viewBox="0 0 100 100" class="team-avatar-svg">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#2962FF" stroke-width="1.5"/>
+                            <path d="M30 30 L70 70 M30 70 L70 30" stroke="#00E676" stroke-width="1.5"/>
+                            <circle cx="50" cy="50" r="12" fill="#0B1F3A"/>
+                        </svg>
+                    </div>
+                    <h3 class="team-name">Akihiro Sato</h3>
+                    <h4 class="team-role">Director of Neural AI Research</h4>
+                    <p class="team-bio">Machine learning architect specializing in temporal transformer models and unsupervised neural wave calibration.</p>
+                </div>
+                <!-- Member 4 -->
+                <div class="team-card scroll-reveal">
+                    <div class="team-avatar-wrapper">
+                        <svg viewBox="0 0 100 100" class="team-avatar-svg">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#2962FF" stroke-width="1.5" stroke-dasharray="8 4"/>
+                            <rect x="35" y="35" width="30" height="30" rx="4" fill="none" stroke="#00E676" stroke-width="1.5"/>
+                            <circle cx="50" cy="50" r="8" fill="#0B1F3A"/>
+                        </svg>
+                    </div>
+                    <h3 class="team-name">Sarah Jenkins</h3>
+                    <h4 class="team-role">Principal Quantum Scientist</h4>
+                    <p class="team-bio">PhD in Quantum Optics researching room-temperature NV diamond center magnetic sensing configurations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Partners Section -->
+    <section class="partners" id="partners">
+        <div class="container">
+            <div class="partners-title scroll-reveal">Collaborating with Leading Global Institutions</div>
+            <div class="partners-grid scroll-reveal">
+                <!-- Logo Partner 1 -->
+                <div class="partner-logo">
+                    <span class="logo-txt">MIT Media Lab</span>
+                </div>
+                <!-- Logo Partner 2 -->
+                <div class="partner-logo">
+                    <span class="logo-txt">Stanford Neuro</span>
+                </div>
+                <!-- Logo Partner 3 -->
+                <div class="partner-logo">
+                    <span class="logo-txt">Max Planck</span>
+                </div>
+                <!-- Logo Partner 4 -->
+                <div class="partner-logo">
+                    <span class="logo-txt">Berkeley EEG Lab</span>
+                </div>
+                <!-- Logo Partner 5 -->
+                <div class="partner-logo">
+                    <span class="logo-txt">Tokyo Tech</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <div class="section-tag">Validation</div>
+                <h2 class="section-title">Trusted by Pioneers</h2>
+                <p class="section-subtitle">What key investors, clinical scientists, and tech leaders say about the NeuroV8 platform.</p>
+            </div>
+
+            <!-- Testimonial Carousel -->
+            <div class="carousel-container scroll-reveal" id="testimonial-carousel">
+                <div class="carousel-track-wrapper">
+                    <div class="carousel-track">
+                        <!-- Testimonial 1 -->
+                        <div class="carousel-slide active">
+                            <div class="testimonial-card">
+                                <span class="quote-mark">“</span>
+                                <p class="testimonial-quote">
+                                    The spatial resolution of NeuroV8's magnetic mapping is unlike any non-invasive interface I've tested. They've bypassed traditional wet-gel constraints and achieved real-time speeds that rival direct cortical implants.
+                                </p>
+                                <div class="testimonial-author">
+                                    <h4 class="author-name">Dr. Christopher Evans</h4>
+                                    <p class="author-title">Professor of Cognitive Neuroscience, Berkeley EEG Lab</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="carousel-slide">
+                            <div class="testimonial-card">
+                                <span class="quote-mark">“</span>
+                                <p class="testimonial-quote">
+                                    NeuroV8's vision of integrating room-temperature NV-diamond sensors solves the ultimate limitation of non-invasive BCI. This is the platform that will lead the next decade of spatial computing.
+                                </p>
+                                <div class="testimonial-author">
+                                    <h4 class="author-name">Julianna Vance</h4>
+                                    <p class="author-title">Managing Director, Horizon Deep-Tech Ventures</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="carousel-slide">
+                            <div class="testimonial-card">
+                                <span class="quote-mark">“</span>
+                                <p class="testimonial-quote">
+                                    Our patients with advanced motor paralysis were able to control assistive text screens within minutes. The automatic temporal calibration removes the hours of training standard headsets require.
+                                </p>
+                                <div class="testimonial-author">
+                                    <h4 class="author-name">Dr. Michael Chen</h4>
+                                    <p class="author-title">Director of Clinical Rehabilitation, Stanford Neuro Hospital</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="carousel-nav">
+                    <button class="carousel-btn prev-btn" aria-label="Previous slide">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="19" y1="12" x2="5" y2="12"/>
+                            <polyline points="12 19 5 12 12 5"/>
+                        </svg>
+                    </button>
+                    <div class="carousel-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                    </div>
+                    <button class="carousel-btn next-btn" aria-label="Next slide">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12 5 19 12 12 19"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <div class="section-tag">Inquiries</div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Common technical and strategic questions about our technology and development cycle.</p>
+            </div>
+
+            <div class="faq-accordion-container scroll-reveal">
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>How does NeuroV8 handle environmental magnetic noise?</span>
+                        <span class="accordion-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="accordion-content">
+                            Earth's magnetic field and urban grids create fields that are millions of times stronger than neural currents. NeuroV8 solves this using active differential gradiometry. The headset contains pairs of sensors; one is positioned close to the scalp to detect brain activity + ambient noise, while the other sits slightly further away to capture ambient noise only. Subtractive hardware circuits remove the noise, isolating the neural fields instantly.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Is the device completely non-invasive?</span>
+                        <span class="accordion-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="accordion-content">
+                            Yes. The NeuroV8 system operates strictly via dry-contact surface sensors embedded in the headset band. There are no skin punctures, chemical gels, or clinical attachments required. It is as safe and easy to wear as a standard set of over-ear headphones.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>What makes your quantum sensing approach unique?</span>
+                        <span class="accordion-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="accordion-content">
+                            Standard neural magnetic trackers (MEG) require rooms lined with metal and liquid-helium supercooling setups. NeuroV8 is researching room-temperature Nitrogen-Vacancy (NV) diamond center magnetometers. These micro-sensors operate in open, unshielded air, picking up cellular magnetic signals directly through hair and skull tissue without interference or attenuation.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Do you provide SDKs for external developer integrations?</span>
+                        <span class="accordion-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="accordion-content">
+                            Yes. We stream data via standard Lab Streaming Layer (LSL) protocols and provide WebSocket interfaces. Developers can consume processed action vectors or raw voltage frequencies directly using our Python, C++, and WebSDK packages to create immersive spatial computing projects.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>When is the commercial headset launch scheduled?</span>
+                        <span class="accordion-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="accordion-content">
+                            We are currently executing Phase 03 (Clinical Validation) with academic and rehabilitation hospital partners. The developer alpha release program is slated for Q4 next year, followed by regulatory submissions for the consumer iteration.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="split-layout">
+                <div class="split-left scroll-reveal">
+                    <div class="section-tag">Get in Touch</div>
+                    <h2 class="section-title">Collaborate with NeuroV8.</h2>
+                    <p class="section-desc">
+                        Whether you are a deep-tech investor, an academic researcher, or a potential technology partner, we welcome scientific dialogue.
+                    </p>
+                    <p class="section-desc">
+                        Fill out the inquiry form, and our core biophysics team will review and respond to schedule a private technology demo.
+                    </p>
+                    
+                    <div class="contact-illustration-wrapper">
+                        <!-- Canvas overlay network mesh -->
+                        <canvas id="contact-mesh-canvas" class="contact-mesh-canvas"></canvas>
+                    </div>
+                </div>
+
+                <div class="split-right scroll-reveal">
+                    <div class="contact-form-card">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Dr. Sarah Connor">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="sarah@institute.org">
+                            </div>
+                            <div class="form-group">
+                                <label for="organization">Organization</label>
+                                <input type="text" id="organization" name="organization" required placeholder="Brain Sciences Institute">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Briefly describe your research interest or partner goals..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                                <span>Connect with NeuroV8</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-arrow">
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                    <polyline points="12 5 19 12 12 19"/>
+                                </svg>
+                            </button>
+                        </form>
+
+                        <div class="form-success-message" id="form-success-message">
+                            <div class="success-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <h3>Inquiry Received</h3>
+                            <p>Thank you for reaching out. Our engineering group has logged your signal. We will establish connection within 48 hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#hero" class="footer-logo">
+                        <span class="logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                                <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+                            </svg>
+                        </span>
+                        <span class="logo-text">NEURO<span class="accent-text">V8</span></span>
+                    </a>
+                    <p class="footer-desc">Pioneering non-invasive, room-temperature diamond NV center magnetometry for brain metrology.</p>
+                </div>
+                
+                <div class="footer-links-group">
+                    <div class="footer-links-col">
+                        <h4 class="footer-col-title">Platform</h4>
+                        <a href="#technology" class="footer-link">Technology</a>
+                        <a href="#applications" class="footer-link">Applications</a>
+                        <a href="#roadmap" class="footer-link">Roadmap</a>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4 class="footer-col-title">Company</h4>
+                        <a href="#about" class="footer-link">About Us</a>
+                        <a href="#research" class="footer-link">Research</a>
+                        <a href="#contact" class="footer-link">Contact</a>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4 class="footer-col-title">Socials</h4>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-link soc-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="soc-icon">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-link soc-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="soc-icon">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="mailto:info@neurov8.com" class="footer-link soc-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="soc-icon">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 NeuroV8 Inc. All rights reserved. Pioneering quantum neural metrology.</p>
+                <div class="footer-legal">
+                    <a href="#" class="legal-link">Privacy Policy</a>
+                    <a href="#" class="legal-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JS script -->
+    <script src="script.js"></script>
+</body>
+</html>
